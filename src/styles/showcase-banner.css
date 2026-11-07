@@ -1,0 +1,257 @@
+/* ===================================================
+   ASTROUD SHOWCASE BANNER — Interactive Hero Carousel
+   =================================================== */
+
+.astroud-showcase-section {
+  padding: 40px 0 60px;
+  background: #FFFFFF;
+}
+
+.astroud-showcase-shell {
+  width: min(1280px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.astroud-showcase-banner {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  min-height: 620px;
+  background: #02010A;
+  color: #FFFFFF;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  box-shadow: 0 24px 60px -12px rgba(15, 23, 42, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  isolation: isolate;
+}
+
+@media (min-width: 1024px) {
+  .astroud-showcase-banner {
+    min-height: 720px;
+  }
+}
+
+/* Background Layers */
+.astroud-showcase-bg-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.astroud-showcase-shader-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.astroud-showcase-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  opacity: 0.95;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+}
+
+.astroud-showcase-gradient-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(2, 1, 10, 0.94) 0%, rgba(2, 1, 10, 0.82) 40%, rgba(2, 1, 10, 0.25) 75%, transparent 100%),
+              linear-gradient(0deg, rgba(2, 1, 10, 0.75) 0%, rgba(2, 1, 10, 0) 30%);
+}
+
+@media (max-width: 768px) {
+  .astroud-showcase-gradient-scrim {
+    background: linear-gradient(180deg, rgba(2, 1, 10, 0.88) 0%, rgba(2, 1, 10, 0.96) 100%);
+  }
+}
+
+/* Content Area */
+.astroud-showcase-body {
+  position: relative;
+  z-index: 10;
+  padding: clamp(48px, 7vw, 96px) clamp(24px, 5vw, 72px) clamp(40px, 5vw, 64px);
+  max-width: 720px;
+}
+
+.astroud-showcase-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #60A5FA;
+  margin-bottom: 20px;
+  background: rgba(37, 99, 235, 0.16);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  padding: 5px 14px;
+  border-radius: 20px;
+}
+
+.astroud-showcase-heading {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: clamp(2.35rem, 4.6vw, 3.85rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  margin: 0 0 22px 0;
+  text-wrap: balance;
+}
+
+.astroud-showcase-desc {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: clamp(15px, 1.25vw, 17px);
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(241, 245, 249, 0.9);
+  margin: 0 0 42px 0;
+  max-width: 560px;
+}
+
+.astroud-showcase-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  color: #0F172A !important;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: 14.5px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 13px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.astroud-showcase-btn:hover {
+  background: #F8FAFC;
+  color: #0F172A !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+}
+
+/* Bottom Navigation Bar */
+.astroud-showcase-toolbar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px clamp(24px, 4vw, 56px) 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(6, 9, 17, 0.75);
+  backdrop-filter: blur(14px);
+  gap: 16px;
+}
+
+.astroud-showcase-tabs {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2.5vw, 36px);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.astroud-showcase-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.astroud-showcase-tab {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 8px 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.astroud-showcase-tab:focus {
+  outline: none;
+}
+
+.astroud-showcase-tab:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.4);
+  outline-offset: 4px;
+}
+
+.astroud-showcase-tab-label {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: clamp(11px, 1vw, 12.5px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.2s ease;
+}
+
+.astroud-showcase-tab:hover .astroud-showcase-tab-label {
+  color: #FFFFFF;
+}
+
+.astroud-showcase-tab.active .astroud-showcase-tab-label {
+  color: #FFFFFF;
+}
+
+/* Progress bar under tab */
+.astroud-showcase-tab-track {
+  width: 100%;
+  height: 2.5px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.15);
+  margin-top: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.astroud-showcase-tab-progress {
+  height: 100%;
+  background: #FFFFFF;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.astroud-showcase-tab:not(.active) .astroud-showcase-tab-track {
+  opacity: 0;
+}
+
+/* Pause / Play Button */
+.astroud-showcase-ctrl-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.astroud-showcase-ctrl-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}

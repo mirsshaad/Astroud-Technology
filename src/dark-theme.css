@@ -1,0 +1,35 @@
+/* ==========================================================================
+   ASTROUD LIGHT THEME OVERRIDES
+   ========================================================================== */
+
+:root {
+  --bg-primary: #FFFFFF;
+  --bg-main: #FFFFFF;
+  --bg-secondary: #F8FAFC;
+  --panel-bg: #FFFFFF;
+  --border-color: #E2E8F0;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --accent: #161E2D;
+  --accent-hover: #232F3E;
+  --ink: #0F172A;
+  --blue: #2563EB;
+  --cyan: #0EA5E9;
+  --gold: #D97706;
+  --muted: #64748B;
+  --line: #E2E8F0;
+  --soft: #F8FAFC;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #0F172A;
+}
+
+.article { max-width: 760px; margin: 0 auto; }
+.article h2 { font-size: 2rem; margin-top: 48px; color: #0F172A; }
+.article p { color: #475569; font-size: 1.03rem; line-height: 1.85; }
+.article .article-intro { font: 500 1.32rem/1.7 'Roboto', sans-serif; color: #0F172A; }
+.article-callout { margin: 44px 0; padding: 30px; border-radius: 16px; background: #F8FAFC; border: 1px solid #E2E8F0; color: #0F172A; }
+.article-callout h3 { margin-bottom: 10px; color: #0F172A; }
+.article-callout p { margin-bottom: 20px; color: #475569; }

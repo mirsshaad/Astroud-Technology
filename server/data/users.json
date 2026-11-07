@@ -1,0 +1,139 @@
+[
+  {
+    "id": "usr_1787516117822_5m29d1h",
+    "name": "Alex Morgan (Test Admin)",
+    "email": "test@astroud.com",
+    "passwordHash": "$2b$10$nlmRnFyGjRMyj2VP5f7RgOIFWZn4b8YfA8JCRpHLhIBXQrNY3zQvG",
+    "company": "Test Co",
+    "role": "Account Admin",
+    "plan": "Professional Tier",
+    "joinedDate": "August 2026",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=250&q=80",
+    "phone": "+1 555-987-6543",
+    "location": "New York, USA",
+    "services": [
+      {
+        "name": "Cloud Infrastructure",
+        "status": "Operational",
+        "tier": "High Performance",
+        "region": "us-east-1"
+      },
+      {
+        "name": "Microsoft 365 Enterprise",
+        "status": "Active",
+        "tier": "E5 Security",
+        "users": 48
+      },
+      {
+        "name": "Managed Backup & Disaster Recovery",
+        "status": "Healthy",
+        "lastBackup": "10 mins ago",
+        "storage": "2.4 TB"
+      }
+    ],
+    "createdAt": "2026-08-23T20:15:17.822Z",
+    "updatedAt": "2026-08-23T20:15:22.557Z"
+  },
+  {
+    "id": "usr_1787516147487_k152a85",
+    "name": "Google User",
+    "email": "user.google@astroud.com",
+    "passwordHash": "$2b$10$bDRlmjp.k/dJxtloHed0POAWrEAZxZ3BcnkbWS.lI5rQKCCoGmrr2",
+    "company": "Google Single Sign-On",
+    "role": "Account Admin",
+    "plan": "Professional Tier",
+    "joinedDate": "August 2026",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=250&q=80",
+    "phone": "",
+    "location": "Global (US / APAC)",
+    "services": [
+      {
+        "name": "Cloud Infrastructure",
+        "status": "Operational",
+        "tier": "High Performance",
+        "region": "us-east-1"
+      },
+      {
+        "name": "Microsoft 365 Enterprise",
+        "status": "Active",
+        "tier": "E5 Security",
+        "users": 48
+      },
+      {
+        "name": "Managed Backup & Disaster Recovery",
+        "status": "Healthy",
+        "lastBackup": "10 mins ago",
+        "storage": "2.4 TB"
+      }
+    ],
+    "createdAt": "2026-08-23T20:15:47.487Z"
+  },
+  {
+    "id": "usr_1787516170154_ojib96u",
+    "name": "Apple User",
+    "email": "user.apple@astroud.com",
+    "passwordHash": "$2b$10$IdTyBBVcA90Sc0/E5WKlhepBN2VYdzPyyL/8ilHz1KpAaF3BfvTNy",
+    "company": "Apple Single Sign-On",
+    "role": "Account Admin",
+    "plan": "Professional Tier",
+    "joinedDate": "August 2026",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=250&q=80",
+    "phone": "",
+    "location": "Global (US / APAC)",
+    "services": [
+      {
+        "name": "Cloud Infrastructure",
+        "status": "Operational",
+        "tier": "High Performance",
+        "region": "us-east-1"
+      },
+      {
+        "name": "Microsoft 365 Enterprise",
+        "status": "Active",
+        "tier": "E5 Security",
+        "users": 48
+      },
+      {
+        "name": "Managed Backup & Disaster Recovery",
+        "status": "Healthy",
+        "lastBackup": "10 mins ago",
+        "storage": "2.4 TB"
+      }
+    ],
+    "createdAt": "2026-08-23T20:16:10.154Z"
+  },
+  {
+    "id": "usr_1789650187419_6l1fem1",
+    "name": "Alex Morgan",
+    "email": "alex.morgan@gmail.com",
+    "passwordHash": "$2b$10$Yz57x65dQ5lO4M2aVkQn6eeoTqQDw8VMYAoYIcK7TKoUNiQCEwjii",
+    "company": "Google Workspace Account",
+    "role": "Account Admin",
+    "plan": "Professional Tier",
+    "joinedDate": "September 2026",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=250&q=80",
+    "phone": "",
+    "location": "Global (US / APAC)",
+    "services": [
+      {
+        "name": "Cloud Infrastructure",
+        "status": "Operational",
+        "tier": "High Performance",
+        "region": "us-east-1"
+      },
+      {
+        "name": "Microsoft 365 Enterprise",
+        "status": "Active",
+        "tier": "E5 Security",
+        "users": 48
+      },
+      {
+        "name": "Managed Backup & Disaster Recovery",
+        "status": "Healthy",
+        "lastBackup": "10 mins ago",
+        "storage": "2.4 TB"
+      }
+    ],
+    "createdAt": "2026-09-17T13:03:07.419Z"
+  }
+]

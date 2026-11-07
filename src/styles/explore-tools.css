@@ -1,0 +1,351 @@
+/* ==========================================================================
+   EXPLORE TOOLS / SERVICES SECTION (Azure Style)
+   ========================================================================== */
+
+.explore-tools-section {
+  position: relative;
+  padding: 80px 0 100px;
+  background: #ffffff;
+  overflow: hidden;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+/* Ambient glow in top-left matching Azure website reference */
+.explore-tools-ambient {
+  position: absolute;
+  top: -120px;
+  left: -80px;
+  width: 580px;
+  height: 580px;
+  background: radial-gradient(circle, rgba(216, 180, 254, 0.4) 0%, rgba(186, 230, 253, 0.35) 45%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(48px);
+}
+
+.explore-tools-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Header */
+.explore-tools-header {
+  margin-bottom: 36px;
+}
+
+.explore-tools-eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #0073bb;
+  margin-bottom: 8px;
+}
+
+.explore-tools-title {
+  font-size: clamp(2.1rem, 3.4vw, 2.85rem);
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.025em;
+  margin-bottom: 24px;
+  line-height: 1.18;
+}
+
+/* Filter Pills */
+.explore-tools-pills {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.explore-tools-pills::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.explore-pill {
+  background-color: #e0f2fe;
+  color: #005a9e;
+  font-size: 14.5px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 9999px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.explore-pill:hover {
+  background-color: #bae6fd;
+}
+
+.explore-pill.active {
+  background-color: #004e8c;
+  color: #ffffff;
+  border-color: #004e8c;
+  box-shadow: 0 2px 6px rgba(0, 78, 140, 0.25);
+}
+
+/* Main Grid: Left Hero Card + Right 6-card grid */
+.explore-tools-grid {
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Left Hero Card */
+.explore-hero-card {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #0f172a;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.explore-hero-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.14);
+}
+
+.explore-hero-visual {
+  height: 270px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #0b1120;
+}
+
+.explore-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.explore-hero-card:hover .explore-hero-img {
+  transform: scale(1.03);
+}
+
+.explore-hero-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-grow: 1;
+  background: #111827;
+  color: #ffffff;
+}
+
+.explore-hero-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #38bdf8;
+  margin-bottom: 8px;
+}
+
+.explore-hero-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.explore-hero-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #cbd5e1;
+  margin-bottom: 24px;
+}
+
+.explore-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.explore-hero-btn:hover {
+  background: #f1f5f9;
+  transform: translateY(-1px);
+}
+
+/* Right 6 Cards Grid (3 columns x 2 rows) */
+.explore-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* Individual Tool Card */
+.explore-tool-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 26px 24px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.explore-tool-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+.explore-tool-icon-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.explore-tool-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.explore-tool-badge {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #1e293b;
+  background: #e2e8f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  vertical-align: super;
+  line-height: 1;
+}
+
+.explore-tool-desc {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #475569;
+  margin-bottom: 24px;
+}
+
+.explore-tool-footer {
+  margin-top: auto;
+}
+
+.explore-tool-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0067b8;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.explore-tool-link:hover {
+  color: #004578;
+}
+
+/* ==========================================================================
+   RESPONSIVENESS
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .explore-tools-grid {
+    grid-template-columns: 270px minmax(0, 1fr);
+    gap: 16px;
+  }
+  .explore-cards-grid {
+    gap: 16px;
+  }
+  .explore-tool-card {
+    padding: 22px 20px 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .explore-tools-grid {
+    grid-template-columns: 1fr;
+  }
+  .explore-hero-card {
+    flex-direction: row;
+    height: auto;
+  }
+  .explore-hero-visual {
+    width: 45%;
+    height: auto;
+    min-height: 240px;
+  }
+  .explore-hero-content {
+    width: 55%;
+  }
+}
+
+@media (max-width: 860px) {
+  .explore-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .explore-hero-card {
+    flex-direction: column;
+  }
+  .explore-hero-visual {
+    width: 100%;
+    height: 220px;
+  }
+  .explore-hero-content {
+    width: 100%;
+  }
+  .explore-tools-container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .explore-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .explore-tools-section {
+    padding: 50px 0 70px;
+  }
+  .explore-tools-container {
+    padding: 0 16px;
+  }
+  .explore-tools-title {
+    font-size: 1.75rem;
+  }
+}
